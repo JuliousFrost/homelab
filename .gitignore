@@ -1,0 +1,14 @@
+# secrets
+*.env
+**/.env
+
+# runtime data (don’t version these)
+**/data/
+**/downloads/
+**/cache/
+**/logs/
+**/tmp/
+
+# app data for books-stack
+vm/books-stack/calibre-web/config/
+vm/books-stack/komga/config/

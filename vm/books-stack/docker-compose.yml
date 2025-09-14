@@ -1,0 +1,36 @@
+services:
+  komga:
+    image: gotson/komga:latest
+    container_name: komga
+    user: "1000:1000"             # runs as your media user
+    environment:
+      - TZ=Asia/Dhaka
+      # Optional: tune Java heap if you have a big library
+      # - JAVA_OPTS=-Xmx2g
+    volumes:
+      # Komga app data (keystore, DB, thumbnails, etc.)
+      - ./komga/config:/config
+
+      # Your libraries on the HDD (map each to a subpath under /data)
+      - /data/books/comic:/data/comics
+      - /data/books/manga:/data/manga
+
+    ports:
+      - "25600:25600"
+    restart: unless-stopped
+
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Dhaka
+      - DOCKER_MODS=linuxserver/mods:universal-calibre
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=1
+    volumes:
+      - ./calibre-web/config:/config
+      - /data/books/calibre-library:/books
+    ports:
+      - "8083:8083"
+    restart: unless-stopped
