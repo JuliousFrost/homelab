@@ -14,6 +14,8 @@ services:
       # Your libraries on the HDD (map each to a subpath under /data)
       - /data/books/comic:/data/comics
       - /data/books/manga:/data/manga
+      - /data/books/novels:/data/novels
+
 
     ports:
       - "25600:25600"
