@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
-  "automerge": false
+  "extends": [
+    "config:best-practices",
+    "docker:pinDigests"     // ensure @sha256 is added to images in compose
+  ],
+  "automerge": false        // you will merge PRs manually
 }
