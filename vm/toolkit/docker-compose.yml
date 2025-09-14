@@ -1,6 +1,6 @@
 services:
   syncthing:
-    image: ghcr.io/linuxserver/syncthing:latest
+    image: ghcr.io/linuxserver/syncthing:latest@sha256:cec9b511a473cf622ce30c50646365df3277798b12f59829e1713ba6c263074d
     container_name: syncthing
     environment:
       - PUID=1000
@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
 
   metube:
-    image: ghcr.io/alexta69/metube
+    image: ghcr.io/alexta69/metube@sha256:df4b25db48351e58fe732b26a92e5d5b06734e1470894707c659fb1bafd3688e
     container_name: metube
     restart: unless-stopped
     ports:
@@ -27,7 +27,7 @@ services:
 
   homarr:
     container_name: homarr
-    image: ghcr.io/homarr-labs/homarr:latest
+    image: ghcr.io/homarr-labs/homarr:latest@sha256:7d58149aa544037d173a48f41fbde86706068d2b8933a33a911dce26457ecf16
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Optional, only if you want docker integration
@@ -39,7 +39,7 @@ services:
 
 
   beets:
-    image: lscr.io/linuxserver/beets:latest
+    image: lscr.io/linuxserver/beets:latest@sha256:f4deaf89c7087cb935b5be66b50a1bf2a8450be1ac27e2c6e847228a8eb64913
     container_name: beets
     environment:
       - PUID=1000
