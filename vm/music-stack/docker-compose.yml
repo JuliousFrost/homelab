@@ -1,6 +1,6 @@
 services:
   navidrome:
-    image: ghcr.io/navidrome/navidrome:latest
+    image: ghcr.io/navidrome/navidrome:latest@sha256:2ae037d464de9f802d047165a13b1c9dc2bdbb14920a317ae4aef1233adc0a3c
     container_name: navidrome
     restart: unless-stopped
     user: "1000:1000"          # adjust if your 'media' UID/GID differ
@@ -21,7 +21,7 @@ services:
       - "4533:4533"
 
   lidarr:
-    image: lscr.io/linuxserver/lidarr:latest
+    image: lscr.io/linuxserver/lidarr:latest@sha256:186bc4d3f22bd6a71c235c1c7f57f90a8473f766278d9c929398fb5ce90eae7e
     container_name: lidarr
     restart: unless-stopped
     sysctls:
@@ -42,7 +42,7 @@ services:
       - "8686:8686"
 
   lidify:
-    image: thewicklowwolf/lidify:latest
+    image: thewicklowwolf/lidify:latest@sha256:958eaddeef8195470b974ee03512d9a5c31ad2af3167f7824448fb026fa9c94a
     container_name: lidify
     restart: unless-stopped
     user: "1000:1000"
