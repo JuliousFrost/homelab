@@ -10,8 +10,8 @@ services:
       ND_LOGLEVEL: info
       ND_SESSIONTIMEOUT: "72h"
       ND_SCANSCHEDULE: "@every 15m"   # periodic rescan; can be empty for manual
-      ND_LASTFM_APIKEY: "556f8574c1ed3347320f66df65ab8592"
-      ND_LASTFM_SECRET: "9cfa52be78459e159de90c864ab63915"
+      ND_LASTFM_APIKEY: ${ND_LASTFM_APIKEY}
+      ND_LASTFM_SECRET: ${ND_LASTFM_SECRET}
       ND_ENABLETRANSCODINGCONFIG: "true"  # shows the Transcodings page in UI
       TZ: Asia/Dhaka
     volumes:
@@ -47,8 +47,8 @@ services:
     restart: unless-stopped
     user: "1000:1000"
     environment:
-      last_fm_api_key: "556f8574c1ed3347320f66df65ab8592"
-      last_fm_api_secret: "556f8574c1ed3347320f66df65ab8592"
+      last_fm_api_key: ${LIDIFY_LAST_FM_API_KEY}
+      last_fm_api_secret: ${LIDIFY_LAST_FM_API_SECRET}
       mode: "LastFM"
       # optional (wire to Lidarr later if you want auto-adds)
       # lidarr_address: "http://lidarr:8686"
