@@ -31,3 +31,10 @@ vm/music-stack/navidrome/
 vm/toolkit/syncthing/config/
 vm/toolkit/homarr/appdata/
 vm/toolkit/beets/config/
+
+# jellyfin stack app data (do not track)
+vm/jellyfin/config/
+vm/jellyfin/jellyseerr/**/config/
+vm/jellyfin/jellystat/**/config/
+**/.env
+*.bak*

@@ -1,0 +1,26 @@
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Dhaka
+      - JELLYFIN_PublishedServerUrl=http://10.0.0.120 #optional
+      - LIBVA_DRIVER_NAME=iHD
+      - VAAPI_DEVICE=/dev/dri/renderD128
+    volumes:
+      - ./config:/config
+      - /data:/data
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0
+    group_add:
+      - "991"   # render
+      - "44"    # video
+    ports:
+      - 8096:8096
+      - 7359:7359/udp #Service Discovery
+      - 1900:1900/udp #Client Discovery
+    restart: unless-stopped
+
