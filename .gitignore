@@ -17,3 +17,8 @@ vm/books-stack/komga/config/
 vm/music-stack/**/config/
 vm/music-stack/**/data/
 **/.env
+
+# ignore editor/backup files
+*.bak*
+*~
+.#*
