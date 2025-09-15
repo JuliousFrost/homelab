@@ -1,0 +1,61 @@
+services:
+  navidrome:
+    image: ghcr.io/navidrome/navidrome:latest
+    container_name: navidrome
+    restart: unless-stopped
+    user: "1000:1000"          # adjust if your 'media' UID/GID differ
+    environment:
+      ND_MUSICFOLDER: /music
+      ND_DATAFOLDER: /data
+      ND_LOGLEVEL: info
+      ND_SESSIONTIMEOUT: "72h"
+      ND_SCANSCHEDULE: "@every 15m"   # periodic rescan; can be empty for manual
+      ND_LASTFM_APIKEY: "556f8574c1ed3347320f66df65ab8592"
+      ND_LASTFM_SECRET: "9cfa52be78459e159de90c864ab63915"
+      ND_ENABLETRANSCODINGCONFIG: "true"  # shows the Transcodings page in UI
+      TZ: Asia/Dhaka
+    volumes:
+      - /data/media/music:/music:ro
+      - /docker/music-stack/navidrome:/data
+    ports:
+      - "4533:4533"
+
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    restart: unless-stopped
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
+      - net.ipv6.conf.default.disable_ipv6=1
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Dhaka
+    volumes:
+      - /docker/music-stack/lidarr:/config
+      - /data/media/music:/music
+      - /data/downloads/qbittorrent:/downloads
+    ports:
+      - "8686:8686"
+
+  lidify:
+    image: thewicklowwolf/lidify:latest
+    container_name: lidify
+    restart: unless-stopped
+    user: "1000:1000"
+    environment:
+      last_fm_api_key: "556f8574c1ed3347320f66df65ab8592"
+      last_fm_api_secret: "556f8574c1ed3347320f66df65ab8592"
+      mode: "LastFM"
+      # optional (wire to Lidarr later if you want auto-adds)
+      # lidarr_address: "http://lidarr:8686"
+      # lidarr_api_key: "<LIDARR_API_KEY>"
+      # root_folder_path: "/music/Library"
+      # dry_run_adding_to_lidarr: "True"
+    volumes:
+      - /docker/music-stack/lidify:/lidify/config
+    ports:
+      - "5000:5000"

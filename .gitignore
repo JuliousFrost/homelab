@@ -12,3 +12,8 @@
 # app data for books-stack
 vm/books-stack/calibre-web/config/
 vm/books-stack/komga/config/
+
+# music-stack app data & env
+vm/music-stack/**/config/
+vm/music-stack/**/data/
+**/.env
