@@ -22,3 +22,12 @@ vm/music-stack/**/data/
 *.bak*
 *~
 .#*
+
+# music-stack app data (do not track)
+vm/music-stack/lidarr/
+vm/music-stack/navidrome/
+
+# toolkit app data (do not track)
+vm/toolkit/syncthing/config/
+vm/toolkit/homarr/appdata/
+vm/toolkit/beets/config/
