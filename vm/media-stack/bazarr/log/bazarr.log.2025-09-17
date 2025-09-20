@@ -1,8 +1,0 @@
-2025-09-17 07:45:51|INFO    |root                            |Scheduler will use this timezone: America/Los_Angeles|
-2025-09-17 07:45:54|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
-2025-09-17 07:45:54|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|
-2025-09-17 07:45:54|INFO    |root                            |BAZARR trying to connect to Radarr SignalR feed...|
-2025-09-17 07:45:54|INFO    |root                            |BAZARR SignalR client for Radarr is connected and waiting for events.|
-2025-09-17 13:40:12|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|
-2025-09-17 17:36:58|INFO    |root                            |BAZARR Finished searching for Subtitles to upgrade. Check History for more information.|
-2025-09-17 19:40:12|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|

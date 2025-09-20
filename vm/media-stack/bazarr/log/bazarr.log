@@ -1,5 +1,0 @@
-2025-09-20 00:04:03|INFO    |root                            |Scheduler will use this timezone: America/Los_Angeles|
-2025-09-20 00:04:05|INFO    |root                            |BAZARR trying to connect to Radarr SignalR feed...|
-2025-09-20 00:04:05|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
-2025-09-20 00:04:05|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|
-2025-09-20 00:04:05|INFO    |root                            |BAZARR SignalR client for Radarr is connected and waiting for events.|

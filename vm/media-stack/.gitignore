@@ -1,0 +1,7 @@
+# Ignore everything in this stack by default
+*
+
+# Keep these:
+!.gitignore
+!docker-compose.yml
+!.env.example
