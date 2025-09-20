@@ -1,0 +1,57 @@
+2025-09-18 01:40:12|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|
+2025-09-18 04:11:39|INFO    |root                            |BAZARR All existing movie subtitles indexed from disk.|
+2025-09-18 05:36:58|INFO    |root                            |BAZARR Finished searching for Subtitles to upgrade. Check History for more information.|
+2025-09-18 07:28:28|INFO    |root                            |BAZARR Running cache maintenance|
+2025-09-18 07:40:12|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|
+2025-09-18 09:43:48|ERROR   |root                            |Error trying to get releases from Github. Http error.|'Traceback (most recent call last):\n  File "/app/bazarr/bin/bazarr/app/check_update.py", line 29, in check_releases\n    r.raise_for_status()\n  File "/app/bazarr/bin/bazarr/../libs/requests/models.py", line 1024, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/morpheus65535/Bazarr/releases?per_page=100'|
+2025-09-18 09:43:50|INFO    |root                            |Scheduler will use this timezone: America/Los_Angeles|
+2025-09-18 09:43:53|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://***.***.***.***:6767|
+2025-09-18 09:43:53|INFO    |waitress                        |BAZARR is started and waiting for requests on: http://[::]:6767|
+2025-09-18 09:43:53|INFO    |root                            |BAZARR trying to connect to Radarr SignalR feed...|
+2025-09-18 09:43:53|INFO    |root                            |BAZARR SignalR client for Radarr is connected and waiting for events.|
+2025-09-18 10:40:05|ERROR   |root                            |BAZARR ffprobe cannot analyze this video file /data/media/movies/Superman (2025)/Superman (2025) [David Corenswet] BluRay H264 DolbyD 5.1 + nickarad.mp4. Could it be corrupted? +-------------------------------------------------------+
+|                     KnowIt 0.5.3                      |
++-------------------------------------------------------+
+|                      pymediainfo                      |
+|                         6.1.0                         |
+|                   libmediainfo.so.0                   |
+|                         v25.3                         |
+|                                                       |
+|                   /usr/bin/ffprobe                    |
+|                        v6.1.2                         |
+|                                                       |
+|                                                       |
+|                        enzyme                         |
+|                         0.5.2                         |
++-------------------------------------------------------+
+|                   provider: ffmpeg                    |
+|               ffmpeg: /usr/bin/ffprobe                |
+|                   profile: default                    |
++-------------------------------------------------------+
+Traceback (most recent call last):
+  File "/app/bazarr/bin/bazarr/../libs/knowit/api.py", line 59, in know
+    result = provider.describe(video_path, context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bazarr/bin/bazarr/../libs/knowit/providers/ffmpeg.py", line 222, in describe
+    data = self.executor.extract_info(video_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bazarr/bin/bazarr/../libs/knowit/providers/ffmpeg.py", line 80, in extract_info
+    json_dump = self._execute(filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/bazarr/bin/bazarr/../libs/knowit/providers/ffmpeg.py", line 114, in _execute
+    return check_output([self.location, '-v', 'quiet', '-print_format', 'json',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/ffprobe', '-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', '-sexagesimal', '/data/media/movies/Superman (2025)/Superman (2025) [David Corenswet] BluRay H264 DolbyD 5.1 + nickarad.mp4']' returned non-zero exit status 1.
+
++-------------------------------------------------------+
+|      Please report any bug or feature request at      |
+|       https://github.com/ratoaq2/knowit/issues.       |
++-------------------------------------------------------+|
+2025-09-18 15:39:53|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|
+2025-09-18 21:08:51|INFO    |root                            |BAZARR Finished searching for Subtitles to upgrade. Check History for more information.|
+2025-09-18 21:39:53|INFO    |root                            |BAZARR Finished searching for missing Movies Subtitles. Check History for more information.|

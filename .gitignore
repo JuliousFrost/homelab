@@ -38,3 +38,11 @@ vm/jellyfin/jellyseerr/**/config/
 vm/jellyfin/jellystat/**/config/
 **/.env
 *.bak*
+
+# media-stack app data (do not track)
+vm/media-stack/**/config/
+vm/media-stack/**/data/
+vm/media-stack/**/downloads/
+vm/media-stack/**/logs/
+**/.env
+*.bak*
