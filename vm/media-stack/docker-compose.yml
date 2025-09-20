@@ -1,7 +1,7 @@
 services:
 
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
+    image: lscr.io/linuxserver/qbittorrent:latest@sha256:ffa4e82aa55e3bd3d2d99151f235fcd41b976303c4d4029940363452a59a3833
     container_name: qbittorrent
     environment:
       - PUID=1000
@@ -20,7 +20,7 @@ services:
       retries: 3
 
   radarr:
-    image: lscr.io/linuxserver/radarr:latest
+    image: lscr.io/linuxserver/radarr:latest@sha256:19474a623b278f558c9696a19b84640ad4aff3b2959f08904a77ffbad73ed7bd
     container_name: radarr
     environment:
       - PUID=1000
@@ -38,7 +38,7 @@ services:
       retries: 3
 
   sonarr:
-    image: lscr.io/linuxserver/sonarr:latest
+    image: lscr.io/linuxserver/sonarr:latest@sha256:bb50bac26881613af15deb4df891e4a7cb09e3333aec20a0522cb188fb22b11d
     container_name: sonarr
     environment:
       - PUID=1000
@@ -56,7 +56,7 @@ services:
       retries: 3
 
   bazarr:
-    image: lscr.io/linuxserver/bazarr:latest
+    image: lscr.io/linuxserver/bazarr:latest@sha256:e1f05f60dada5f7bc83c52037e222a34c26ad04339c22ea685de680ddcd58487
     container_name: bazarr
     environment:
       - PUID=1000
@@ -74,7 +74,7 @@ services:
       retries: 3
 
   prowlarr:
-    image: lscr.io/linuxserver/prowlarr:latest
+    image: lscr.io/linuxserver/prowlarr:latest@sha256:856c93bab72a6a41a23ff60bab48554135c044a456f40909307011dea8ddeafb
     container_name: prowlarr
     environment:
       - PUID=1000
@@ -91,7 +91,7 @@ services:
       retries: 3
 
   jellyseerr:
-    image: fallenbagel/jellyseerr:latest
+    image: fallenbagel/jellyseerr:latest@sha256:4538137bc5af902dece165f2bf73776d9cf4eafb6dd714670724af8f3eb77764
     container_name: jellyseerr
     environment:
       - PUID=1000
@@ -108,7 +108,7 @@ services:
       retries: 3
 
   ytdl-sub:
-    image: ghcr.io/jmbannon/ytdl-sub:latest
+    image: ghcr.io/jmbannon/ytdl-sub:latest@sha256:a7a8a454be507efb0b764be6f92e0549db4325faf2b0fbf66805992aac0e48e9
     container_name: ytdl-sub
     environment:
       - PUID=1000
@@ -122,7 +122,7 @@ services:
     restart: unless-stopped
 
   flaresolverr:
-    image: flaresolverr/flaresolverr
+    image: flaresolverr/flaresolverr@sha256:5379a9209c86870558d77c8cdf7efdf300aecf0447617a05dc77e0491d53f34c
     container_name: flaresolverr
     network_mode: "host"
     ports:
