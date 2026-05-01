@@ -39,7 +39,7 @@ services:
 
 
   beets:
-    image: lscr.io/linuxserver/beets:latest@sha256:f4deaf89c7087cb935b5be66b50a1bf2a8450be1ac27e2c6e847228a8eb64913
+    image: lscr.io/linuxserver/beets:latest@sha256:1503dfbae2379b90db821de202ead77a269736f8cedde0b27f73e43c16f06801
     container_name: beets
     environment:
       - PUID=1000
