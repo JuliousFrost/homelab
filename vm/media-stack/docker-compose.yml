@@ -122,7 +122,7 @@ services:
     restart: unless-stopped
 
   flaresolverr:
-    image: flaresolverr/flaresolverr@sha256:5379a9209c86870558d77c8cdf7efdf300aecf0447617a05dc77e0491d53f34c
+    image: flaresolverr/flaresolverr@sha256:139dfee1c6f89249c8d665d1333a42e8ec74ec0a86bc6bb1c8461e10d3a66a47
     container_name: flaresolverr
     network_mode: "host"
     ports:
