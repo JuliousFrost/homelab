@@ -1,6 +1,6 @@
 services:
   syncthing:
-    image: ghcr.io/linuxserver/syncthing:latest@sha256:cec9b511a473cf622ce30c50646365df3277798b12f59829e1713ba6c263074d
+    image: ghcr.io/linuxserver/syncthing:latest@sha256:07da4c778027cb13d4a2b9bb8b8d7432ac3a0f0540bb7248b016be3a1cc69788
     container_name: syncthing
     environment:
       - PUID=1000
