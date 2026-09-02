@@ -56,7 +56,7 @@ services:
       retries: 3
 
   bazarr:
-    image: lscr.io/linuxserver/bazarr:latest@sha256:e1f05f60dada5f7bc83c52037e222a34c26ad04339c22ea685de680ddcd58487
+    image: lscr.io/linuxserver/bazarr:latest@sha256:a20fb11a440d704a9d61c283aa26462aad33dc63223b173f8d8c77d33e8e9d59
     container_name: bazarr
     environment:
       - PUID=1000
