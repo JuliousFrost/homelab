@@ -22,7 +22,7 @@ services:
     restart: unless-stopped
 
   calibre-web:
-    image: lscr.io/linuxserver/calibre-web:latest@sha256:98a20064168ab284bbb8e048af48c89a5e25650f35a4b217705241af94c1debe
+    image: lscr.io/linuxserver/calibre-web:latest@sha256:0767226fcf209d12d93ef1d29711ebc22c1c9db2c8a4b0e4469a8771fe269a52
     container_name: calibre-web
     environment:
       - PUID=1000
