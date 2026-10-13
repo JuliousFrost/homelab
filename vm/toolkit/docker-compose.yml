@@ -27,7 +27,7 @@ services:
 
   homarr:
     container_name: homarr
-    image: ghcr.io/homarr-labs/homarr:latest@sha256:7d58149aa544037d173a48f41fbde86706068d2b8933a33a911dce26457ecf16
+    image: ghcr.io/homarr-labs/homarr:latest@sha256:025471efe0735b6bb89953ea4e141c984a171c1781bc8ca404163d3c26d0e26d
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Optional, only if you want docker integration
