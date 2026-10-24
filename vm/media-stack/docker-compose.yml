@@ -38,7 +38,7 @@ services:
       retries: 3
 
   sonarr:
-    image: lscr.io/linuxserver/sonarr:latest@sha256:bb50bac26881613af15deb4df891e4a7cb09e3333aec20a0522cb188fb22b11d
+    image: lscr.io/linuxserver/sonarr:latest@sha256:48e36b608b461273b9dae857725cd0561a127f2c694b687318f6d0c5ce63e5c9
     container_name: sonarr
     environment:
       - PUID=1000
