@@ -91,7 +91,7 @@ services:
       retries: 3
 
   jellyseerr:
-    image: fallenbagel/jellyseerr:latest@sha256:4538137bc5af902dece165f2bf73776d9cf4eafb6dd714670724af8f3eb77764
+    image: fallenbagel/jellyseerr:latest@sha256:91edd5620e51ed512ecdfd8b2e157c473faf385edf88c3764dc9ec32d310c0df
     container_name: jellyseerr
     environment:
       - PUID=1000
