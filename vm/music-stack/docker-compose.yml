@@ -42,7 +42,7 @@ services:
       - "8686:8686"
 
   lidify:
-    image: thewicklowwolf/lidify:latest@sha256:958eaddeef8195470b974ee03512d9a5c31ad2af3167f7824448fb026fa9c94a
+    image: thewicklowwolf/lidify:latest@sha256:3e99fa32bd5f4462e61d07ac949ca3443931f4a62a3cfcf443ec804814a2cd76
     container_name: lidify
     restart: unless-stopped
     user: "1000:1000"
