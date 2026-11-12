@@ -108,7 +108,7 @@ services:
       retries: 3
 
   ytdl-sub:
-    image: ghcr.io/jmbannon/ytdl-sub:latest@sha256:a7a8a454be507efb0b764be6f92e0549db4325faf2b0fbf66805992aac0e48e9
+    image: ghcr.io/jmbannon/ytdl-sub:latest@sha256:dcb058a1c5d94aed7c0fe9e206eed84e0982771ae600155934f07e5ed7c71612
     container_name: ytdl-sub
     environment:
       - PUID=1000
