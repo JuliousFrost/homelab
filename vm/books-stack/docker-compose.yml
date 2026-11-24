@@ -1,6 +1,6 @@
 services:
   komga:
-    image: gotson/komga:1.23.4@sha256:ccacf59fdbe4e9d12c67429af8fa99a29eeae0e262dad794835a3aeacbee1e19
+    image: gotson/komga:1.30.2@sha256:e4198a0d529d2be70bee5012484538154897c2d3071043b133bdaeacb806444e
     container_name: komga
     user: "1000:1000"             # runs as your media user
     environment:
